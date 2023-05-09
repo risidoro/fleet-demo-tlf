@@ -1,3 +1,4 @@
 namespace: fleet-default
 helm:
-  chart: https://github.com/rancher/rodeo/tree/master/charts/rancher-demo
+  repo: https://rancher.github.io/rodeo	
+  chart: rancher-demo
