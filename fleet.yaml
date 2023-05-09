@@ -4,3 +4,10 @@ helm:
   chart: rancher-demo
   valuesFiles:
     - "values.yaml"
+targetCustomizations:
+- name: dev
+  clusterSelector:
+    matchLabels:
+      env: dev
+  kustomize:
+    dir: clusters/dev
