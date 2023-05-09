@@ -2,3 +2,5 @@ namespace: fleet-default
 helm:
   repo: https://rancher.github.io/rodeo	
   chart: rancher-demo
+  valuesFiles:
+    - "values.yaml"
