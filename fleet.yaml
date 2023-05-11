@@ -23,7 +23,7 @@ targetCustomizations:
   namespace: default
   helm:
     valuesFiles: 
-      - "dev/custom1.yaml"
+      - "test.yaml"
   clusterSelector:
     matchLabels:
       env: test
