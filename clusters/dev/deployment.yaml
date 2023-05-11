@@ -1,6 +1,0 @@
-spec:
-  containers:
-    - name: hello-world
-      env:
-        - name: COW_COLOR
-          value: red
