@@ -4,9 +4,8 @@ metadata:
   name: demo-fleet-tlf-rancher-demo
 spec:
   replicas: 1
-  
-# containers:
-#     - name: hello-world
-#       env:            
-#       - name: COW_COLOR
-#         value: red
+  containers:
+    - name: hello-world
+      env:            
+      - name: CONTAINER_COLOR
+        value: green
