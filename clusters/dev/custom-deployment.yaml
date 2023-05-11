@@ -2,10 +2,11 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: demo-fleet-tlf-rancher-demo
-  template:
-    spec:
-      containers:
-        - name: hello-world
-          env:
-            - name: COW_COLOR
-              value: red
+spec:
+  replicas: 1
+  
+# containers:
+#     - name: hello-world
+#       env:            
+#       - name: COW_COLOR
+#         value: red
