@@ -4,10 +4,18 @@ helm:
   chart: rancher-demo
   valuesFiles:
     - "values.yaml"
+
 targetCustomizations:
 - name: dev
+  helm:
+    values: 
+      replica: 3
+      app:
+        localization:
+           pets: "chameleons"
+           color: "green"
   clusterSelector:
     matchLabels:
       env: dev
-  kustomize:
-    dir: clusters/dev
+  # kustomize:
+  #   dir: clusters/dev
