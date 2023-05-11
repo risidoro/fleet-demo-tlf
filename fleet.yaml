@@ -9,15 +9,15 @@ targetCustomizations:
 - name: dev
   namespace: default
   helm:
-    yaml:
-      dev:
-      - custom1
-    # values: 
-    #   replica: 3
-    #   app:
-    #     localization:
-    #        pets: "chameleons"
-    #        color: "green"
+    # yaml:
+    #   dev:
+    #   - custom1
+    values: 
+      replica: 3
+      app:
+        localization:
+           pets: "chameleons"
+           color: "green"
   clusterSelector:
     matchLabels:
       env: dev
