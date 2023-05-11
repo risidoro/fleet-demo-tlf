@@ -9,9 +9,6 @@ targetCustomizations:
 - name: dev
   namespace: default
   helm:
-    # yaml:
-    #   dev:
-    #   - custom1
     values: 
       replica: 3
       app:
@@ -21,5 +18,12 @@ targetCustomizations:
   clusterSelector:
     matchLabels:
       env: dev
-  # kustomize:
-  #   dir: clusters/dev
+      
+- name: test
+  namespace: default
+  helm:
+    valuesFiles: 
+      - dev/custom1.yaml
+  clusterSelector:
+    matchLabels:
+      env: test
