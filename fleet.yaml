@@ -18,12 +18,12 @@ targetCustomizations:
   clusterSelector:
     matchLabels:
       env: dev
-      
+
 - name: test
   namespace: default
   helm:
     valuesFiles: 
-      - dev/custom1.yaml
+      - "dev/custom1.yaml"
   clusterSelector:
     matchLabels:
       env: test
