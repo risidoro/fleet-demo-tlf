@@ -6,24 +6,20 @@ helm:
     - "values.yaml"
 
 targetCustomizations:
-- name: dev
-  namespace: default
-  helm:
-    values: 
-      replica: 3
-      app:
-        localization:
-           pets: "chameleons"
-           color: "green"
-  clusterSelector:
-    matchLabels:
-      env: dev
-
-- name: test
+- name: k3s01
   namespace: default
   helm:
     valuesFiles: 
-      - "test.yaml"
+      - "k3s01/k3s01.yaml"
   clusterSelector:
     matchLabels:
-      env: test
+      clusterconfig: k3s01
+
+- name: k3s02
+  namespace: default
+  helm:
+    valuesFiles: 
+      - "k3s02/k3s02.yaml"
+  clusterSelector:
+    matchLabels:
+      clusterconfig: k3s02
