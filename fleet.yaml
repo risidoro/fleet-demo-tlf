@@ -10,7 +10,7 @@ targetCustomizations:
   namespace: default
   helm:
     valuesFiles: 
-      - "k3s01.yaml"
+      - "clusters/k3s01/k3s01.yaml"
   clusterSelector:
     matchLabels:
       clusterconfig: k3s01
@@ -19,7 +19,7 @@ targetCustomizations:
   namespace: default
   helm:
     valuesFiles: 
-      - "k3s02.yaml"
+      - "clusters/k3s02/k3s02.yaml"
   clusterSelector:
     matchLabels:
       clusterconfig: k3s02
